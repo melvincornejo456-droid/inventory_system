@@ -1,0 +1,23 @@
+# Database credentials
+db.php
+.env
+.env.*
+
+# Database backups
+*.sql
+*.sql.zip
+*.sql.gz
+
+# Backup files
+*.bak
+*.old
+*.tmp
+
+# Logs
+*.log
+
+# Dependencies
+/vendor/
+
+# Editor settings
+.idea/

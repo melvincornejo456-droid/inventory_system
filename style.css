@@ -1,0 +1,887 @@
+    /* Modern professional navigation bar */
+
+
+    body {
+    margin: 0;
+    }
+
+.navbar {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 6px;
+
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 12px 20px;
+
+    background: linear-gradient(135deg, #172554, #1d4ed8);
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 3px 10px rgba(15, 23, 42, 0.18);
+}
+
+.navbar > .nav-profile {
+    margin-left: auto;
+}
+
+    .navbar a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+
+        color: #eaf0ff;
+        text-decoration: none;
+        padding: 10px 13px;
+        border: 1px solid transparent;
+        border-radius: 7px;
+
+        font-size: 14px;
+        font-weight: 600;
+        white-space: nowrap;
+
+        transition: background-color 0.2s, color 0.2s;
+    }
+
+    .navbar a:hover {
+        background-color: rgba(255, 255, 255, 0.14);
+        color: #ffffff;
+    }
+
+    .navbar a.active {
+    background-color: #ffffff;
+    color: #1d4ed8;
+    border: 1px solid transparent;
+    box-shadow: none;
+    }
+
+    .navbar a:focus-visible {
+        outline: 3px solid #93c5fd;
+        outline-offset: 2px;
+    }
+
+    /* Responsive navigation bar */
+
+    @media (max-width: 600px) {
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+        padding: 12px;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .navbar a {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 12px;
+        text-align: center;
+        overflow-wrap: anywhere;
+    }
+
+    }
+
+    .report-card {
+        background: #ffffff;
+        padding: 24px;
+        margin: 20px 0;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .report-card h2 {
+        font-size: 18px;
+        color: #555555;
+    }
+
+    .report-card p {
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+
+    /* Sales report date filter */
+
+    main form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: end;
+    gap: 18px;
+
+    width: fit-content;
+    max-width: 100%;
+    box-sizing: border-box;
+
+    padding: 24px;
+    margin-bottom: 28px;
+
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+    }
+
+    .date-filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    }
+
+    main form label {
+    color: #334155;
+    font-size: 14px;
+    font-weight: 600;
+    }
+
+    main form input[type="date"] {
+    width: 190px;
+    box-sizing: border-box;
+    padding: 11px 12px;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+
+    background: #ffffff;
+    color: #334155;
+    font: inherit;
+    }
+
+    main form button {
+    width: auto;
+    padding: 12px 20px;
+    margin: 0;
+
+    border: none;
+    border-radius: 7px;
+
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    }
+
+    main form button:hover {
+    background: #1d4ed8;
+    }
+
+    .summary-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    }
+
+    .summary-cards .report-card {
+    margin: 0;
+    min-width: 0;
+    }
+
+    @media (max-width: 600px) {
+    .summary-cards {
+        grid-template-columns: 1fr;
+    }
+    }
+
+    /* Summary card improvements */
+
+    .summary-cards .report-card {
+    border-left: 5px solid #2563eb;
+    transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .summary-cards .report-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.12);
+    }
+
+    .summary-cards .report-card h2 {
+    margin-top: 0;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #64748b;
+    }
+
+    .summary-cards .report-card p {
+    font-size: 30px;
+    color: #172554;
+    margin-top: 12px;
+    }
+
+    /* Summary card improvements */
+
+    .summary-cards .report-card {
+    border-left: 5px solid #2563eb;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .summary-cards .report-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.12);
+    }
+
+    .summary-cards .report-card h2 {
+    margin-top: 0;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #64748b;
+    }
+
+    .summary-cards .report-card p {
+    font-size: 30px;
+    color: #172554;
+    margin-top: 12px;
+    }
+
+    /* Professional sales report tables */
+
+    main table {
+    border-spacing: 0;  
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.07);
+    }
+
+    main th {
+    padding: 16px 18px;
+    background: #172554;
+    color: #ffffff;
+    text-align: left;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    }
+
+    main td {
+    padding: 15px 18px;
+    color: #334155;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 14px;
+    }
+
+    main tbody tr:last-child td {
+    border-bottom: none;
+    }
+
+    main tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+    }
+
+    main tbody tr:hover {
+    background-color: #eff6ff;
+    transition: background-color 0.2s ease;
+    }
+
+    /* Keep tables usable on small screens */
+
+    @media (max-width: 600px) {
+    main table {
+        font-size: 12px;
+    }
+
+    main th,
+    main td {
+        padding: 10px 8px;
+        overflow-wrap: anywhere;
+    }
+    }
+
+    /* Sales report table panels */
+
+    .table-card {
+    background: #ffffff;
+    padding: 24px;
+    margin: 28px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+    }
+
+    .table-card h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #172554;
+    font-size: 20px;
+    }
+
+    .table-card table {
+    margin-bottom: 0;
+    box-shadow: none;
+    }
+
+    @media (max-width: 600px) {
+    .table-card {
+        padding: 14px;
+        margin: 20px 0;
+    }
+
+    .table-card h2 {
+        font-size: 18px;
+    }
+    }
+
+/* STORE REPORTS DROPDOWN */
+
+.navbar .dropdown {
+    position: relative;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.navbar .dropdown-button,
+.navbar .submenu-button {
+    display: block;
+    box-sizing: border-box;
+    background: transparent;
+    color: #eaf0ff;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    padding: 10px 13px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: left;
+}
+
+.navbar .dropdown-content {
+    display: none !important;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 220px;
+    background: #ffffff;
+    border-radius: 7px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.navbar .dropdown:hover > .dropdown-content {
+    display: block !important;
+}
+
+.navbar .submenu {
+    position: relative;
+}
+
+.navbar .submenu-button {
+    width: 100%;
+    color: #172554;
+}
+
+.navbar .submenu-content {
+    display: none !important;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    min-width: 220px;
+    background: #ffffff;
+    border-radius: 7px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+}
+
+.navbar .submenu:hover > .submenu-content {
+    display: block !important;
+}
+
+.navbar .dropdown-content a,
+.navbar .submenu-content a {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    color: #172554;
+    padding: 12px 14px;
+    text-decoration: none;
+    white-space: normal;
+}
+
+.navbar .dropdown-content a:hover,
+.navbar .submenu-content a:hover {
+    background-color: #eff6ff;
+    color: #1d4ed8;
+}
+
+@media (max-width: 600px) {
+    .navbar .dropdown {
+        display: block;
+        width: 100%;
+    }
+
+    .navbar .dropdown-button,
+    .navbar .submenu-button {
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+    }
+
+    .navbar .dropdown-content,
+    .navbar .submenu-content {
+        position: static;
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        box-shadow: none;
+    }
+}
+
+
+/* CENTER ONLY THE REPORT PAGE HEADINGS */
+
+main h1 {
+    text-align: left;
+}
+
+main:has(.daily-report-form) h1,
+main:has(.monthly-report-form) h1 {
+    text-align: center;
+}
+
+
+/* Apply these layout rules ONLY to report forms */
+main form.monthly-report-form,
+main form.daily-report-form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    width: calc(100% - 32px);
+    max-width: 500px;
+    margin: 24px auto;
+    box-sizing: border-box;
+}
+
+main form.monthly-report-form .date-filter-group,
+main form.daily-report-form .date-filter-group {
+    width: 100%;
+}
+
+main form.monthly-report-form input,
+main form.monthly-report-form select,
+main form.daily-report-form input,
+main form.daily-report-form select {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+main form.monthly-report-form button,
+main form.daily-report-form button {
+    align-self: center;
+    margin: 0;
+}
+
+/* CENTER MONTHLY REPORT FORM */
+
+main form.monthly-report-form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    width: calc(100% - 32px);
+    max-width: 500px;
+    margin: 24px auto;
+
+    box-sizing: border-box;
+}
+
+main form.monthly-report-form .date-filter-group {
+    width: 100%;
+}
+
+main form.monthly-report-form input[type="date"] {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+main form.monthly-report-form button {
+    align-self: center;
+    margin: 0;
+}
+
+/* CENTER DAILY REPORT FORM */
+
+main form.daily-report-form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    width: calc(100% - 32px);
+    max-width: 500px;
+    margin: 24px auto;
+
+    box-sizing: border-box;
+}
+
+main form.daily-report-form .date-filter-group {
+    width: 100%;
+}
+
+main form.daily-report-form input[type="date"] {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+main form.daily-report-form button {
+    align-self: center;
+    margin: 0;
+}
+
+
+/* CENTER DAILY REPORT RESULTS ONLY */
+
+main .daily-report-table {
+    max-width: 900px;
+    margin: 28px auto;
+    box-sizing: border-box;
+}
+
+main .daily-report-table table {
+    width: 100%;
+}
+
+
+/* REDUCE DAILY SELECT DATE SIZE */
+
+main form.daily-report-form input[type="date"] {
+    width: 220px;
+    max-width: 100%;
+    padding: 8px 10px;
+    font-size: 14px;
+    margin: 0 auto;
+}
+
+main form.daily-report-form .date-filter-group {
+    align-items: center;
+}
+
+main form.daily-report-form label {
+    text-align: center;
+}
+
+
+/* FIX SALE DETAILS HEADING ALIGNMENT */
+
+.sale-card h2 {
+    text-align: left;
+}
+
+
+/* Administrator Profile Dropdown */
+.nav-profile {
+    position: relative;
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+.nav-profile-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    background: #1E293B;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: inherit;
+    text-align: left;
+    transition: background 0.2s ease;
+}
+
+.nav-profile-button:hover {
+    background: #334155;
+}
+
+.nav-profile-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #DBEAFE;
+    color: #1D4ED8;
+    flex-shrink: 0;
+}
+
+.nav-profile-name {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.nav-profile-name strong {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.nav-profile-name small {
+    color: #CBD5E1;
+    font-size: 12px;
+}
+
+.nav-profile-arrow {
+    margin-left: 4px;
+    color: #CBD5E1;
+}
+
+.nav-profile-menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    width: 210px;
+    padding: 6px;
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+}
+
+.nav-profile-menu[hidden] {
+    display: none;
+}
+
+.nav-profile-menu a,
+.nav-profile-menu .nav-logout-button {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: none;
+    border-radius: 7px;
+    background: transparent;
+    color: #334155;
+    font-family: inherit;
+    font-size: 14px;
+    text-align: left;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nav-profile-menu a:hover {
+    background: #F1F5F9;
+}
+
+.nav-profile-menu .nav-logout-button {
+    color: #DC2626;
+}
+
+.nav-profile-menu .nav-logout-button:hover {
+    background: #FEF2F2;
+}
+
+.nav-profile-menu form {
+    margin: 0;
+}
+
+
+/* ADMINISTRATOR PROFILE DROPDOWN */
+
+.navbar > .nav-profile {
+    position: relative;
+    margin-left: auto !important;
+    flex: 0 0 auto;
+    z-index: 1000;
+}
+
+.nav-profile-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    background: #1e293b;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: inherit;
+    text-align: left;
+}
+
+.nav-profile-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #dbeafe;
+    color: #1d4ed8;
+    flex-shrink: 0;
+}
+
+.nav-profile-name {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.nav-profile-name strong {
+    font-size: 13px;
+}
+
+.nav-profile-name small {
+    color: #cbd5e1;
+    font-size: 12px;
+}
+
+.nav-profile-arrow {
+    margin-left: 4px;
+    color: #cbd5e1;
+}
+
+.nav-profile-menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    width: 210px;
+    padding: 6px;
+    box-sizing: border-box;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.nav-profile-menu[hidden] {
+    display: none;
+}
+
+.nav-profile-menu a,
+.nav-profile-menu .nav-logout-button {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: none;
+    border-radius: 7px;
+    background: transparent;
+    color: #334155;
+    font-family: inherit;
+    font-size: 14px;
+    text-align: left;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nav-profile-menu a:hover {
+    background: #f1f5f9;
+}
+
+.nav-profile-menu .nav-logout-button {
+    color: #dc2626;
+}
+
+.nav-profile-menu .nav-logout-button:hover {
+    background: #fef2f2;
+}
+
+.nav-profile-menu form {
+    margin: 0;
+}
+
+
+/* Keep the navbar logo consistent on every page */
+
+.navbar .navbar-brand img.navbar-logo {
+display: block !important;
+width: 45px !important;
+height: 45px !important;
+min-width: 45px !important;
+min-height: 45px !important;
+max-width: 45px !important;
+max-height: 45px !important;
+object-fit: contain !important;
+position: static !important;
+transform: none !important;
+flex: 0 0 45px !important;
+}
+
+.navbar .navbar-brand {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+flex-shrink: 0;
+}
+
+
+/* Keep the Inventory tools brand text white on every page */
+.navbar .navbar-brand .navbar-business-name {
+color: #ffffff !important;
+}
+
+
+.revenue-card small {
+    display: block;
+    margin-top: 10px;
+    color: #D1FAE5;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+
+/* Center Monthly Sales Summary heading */
+.monthly-summary-title {
+    text-align: center;
+    width: 100%;
+    margin: 0 0 24px;
+    color: #0f172a;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+
+/* Center Monthly Sales Summary table */
+.table-card {
+    width: 100%;
+    max-width: 900px;
+    margin: 30px auto;
+    box-sizing: border-box;
+}
+
+.table-card table {
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+
+
+/* Fix: Sales History table width */
+.transaction-table-card {
+    width: 100% !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box;
+}
+
+.transaction-table-card .table-responsive {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.transaction-table-card table {
+    width: 100% !important;
+    min-width: 1000px;
+    table-layout: auto;
+}
+
+
+
+
+
